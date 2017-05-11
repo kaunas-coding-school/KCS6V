@@ -1,0 +1,51 @@
+* {
+    border: 1px solid black;
+}
+
+.wraperis {
+    display: table;
+    height: 100%;
+}
+
+.meniu {
+    display: table;
+    height: 100%;
+}
+
+.meniu a {
+    display: block;
+    padding: 0 10px;
+    background-color: #DEB887;
+    color: #7c6347;
+    text-decoration: none;
+}
+
+.meniu a:hover {
+    background-color: #7c6347;
+    color: #DEB887;
+}
+
+.turinys {
+}
+
+.stulp {
+    float: left;
+    padding: 1%;
+}
+
+.st_k {
+    width: 14%;
+}
+
+.st_d {
+    width: 80%;
+}
+
+.burger {
+    float: right;
+    right: 10px;
+}
+
+.fl {
+    float: left
+}

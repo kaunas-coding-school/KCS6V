@@ -1,9 +1,16 @@
+html {
+    height: 100%;
+}
 body {
+    min-height: 100%;
     background-color: lightblue;
+    padding: 0;
+    margin: 0;
 }
 h1 {
     color:white;
     text-align: center;
+    margin: 0 auto;
 }
 p {
     font-family: Verdana;
@@ -13,10 +20,7 @@ p {
     text-align: center;
     color: red;
 }
-#idelementas {
-    text-align: right;
-    color: #00ff00;
-    position: static;
-    top: 0px;
-    right: 0px;
+.antraste {
+    width: 500px;
+    border-bottom: 3px solid black;
 }
