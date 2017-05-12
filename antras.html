@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/antras.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tabai.css">
+
 </head>
 <body>
 <header>
@@ -31,8 +33,55 @@
     <div class="turinys stulp st_d">
         <h1>Antraštė</h1>
         <p>
-            <img class="fl" src="/img/Google_Suite.png" width="200" height="200" id="myImage"/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar feugiat hendrerit. Ut quis nulla
+
+
+
+            <img class="fl"
+                 src="/img/Google_Suite.png"
+                 width="200"
+                 height="200"
+                 id="googleLogo"
+            />
+
+            <button type="button" id="slepti">
+                Slepti logo
+            </button>
+            <button type="button" id="rodyti">
+                Rodyti logo
+            </button>
+            <button type="button" id="toglas">
+                Toggle logo
+            </button>
+
+
+
+        <div class="tabuliacija">
+            <div class="tabs">
+                <div class="tab" sheet-id="sheet1">
+                    tab1
+                </div>
+                <div class="tab" sheet-id="sheet2">
+                    tab2
+                </div>
+                <div class="tab" sheet-id="sheet3">
+                    tab3
+                </div>
+            </div>
+            <div class="sheets">
+                <div class="sheet"
+                     id="sheet1">textas1
+                </div>
+                <div class="sheet"
+                     id="sheet2">textas21
+                </div>
+                <div class="sheet"
+                     id="sheet3">textas3
+                </div>
+            </div>
+        </div>
+
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar feugiat hendrerit. Ut quis nulla
             eget nisl facilisis tincidunt. Phasellus id leo risus. Cras at ullamcorper ipsum, tincidunt tempus neque.
             Fusce egestas ullamcorper aliquam. Nam urna velit, gravida eget bibendum hendrerit, finibus nec turpis.
             Aliquam erat volutpat.
@@ -61,5 +110,12 @@
         </table>
     </div>
 </div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jq_kodas.js"></script>
+<script src="js/jq_tabai.js"></script>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
 </body>
 </html>
