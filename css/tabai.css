@@ -1,0 +1,29 @@
+.tabuliacija {
+    margin: 20px auto;
+    width: 500px;
+}
+.tabs {
+    background-color: #DEB887;
+    height: 30px;
+    width: 500px;
+}
+.tab {
+    float: left;
+    background-color: #DEB887;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    border-right: 1px solid #FFF8DC;
+}
+.active {
+    background-color: #FFF8DC;
+    border: 1px solid #FFF8DC;
+}
+.sheet {
+    display: none;
+    padding: 10px;
+}
+.sheets {
+    background-color: #FFF8DC;
+    width: 500px;
+    height: 200px;
+}

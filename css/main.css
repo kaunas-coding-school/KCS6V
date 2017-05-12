@@ -24,3 +24,6 @@ p {
     width: 500px;
     border-bottom: 3px solid black;
 }
+#myImage {
+    display:none;
+}

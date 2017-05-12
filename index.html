@@ -5,8 +5,9 @@
     <title>Pirmasis puslapis</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tabai.css">
 </head>
-<body>
+<body id="mybg">
 <nav class="meniu">
     <div class="item">
         <a href="index.html" title="Pirmasis puslapis">Pirmas</a>
@@ -21,8 +22,49 @@
 <div class="turinys">
     <h1 class="antraste">Antraštė</h1>
 
+    <div class="tabuliacija">
+        <div class="tabs">
+            <div onclick="showTab(1)"
+                 class="tab"
+                 id="tab1">tab1
+            </div>
+            <div onclick="showTab(2)"
+                 class="tab"
+                 id="tab2">tab2
+            </div>
+            <div onclick="showTab(3)"
+                 class="tab"
+                 id="tab3">tab3
+            </div>
+        </div>
+        <div class="sheets">
+            <div class="sheet"
+                 id="sheet1">textas1
+            </div>
+            <div class="sheet"
+                 id="sheet2">textas21
+            </div>
+            <div class="sheet"
+                 id="sheet3">textas3
+            </div>
+        </div>
+    </div>
+
+
     <div id="lipsum">
         <p>
+
+            <input type="button"
+                   value="Lempute"
+                   onclick="toggleShow()"
+            />
+
+            <img id="myImage"
+                 src="img/pic_bulboff.gif"
+                 style="width:100px"
+                 onclick="toggle()"
+            />
+
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar feugiat hendrerit. Ut quis nulla
             eget nisl facilisis tincidunt. Phasellus id leo risus. Cras at ullamcorper ipsum, tincidunt tempus neque.
             Fusce egestas ullamcorper aliquam. Nam urna velit, gravida eget bibendum hendrerit, finibus nec turpis.
@@ -61,11 +103,15 @@
             Vestibulum ullamcorper ornare felis, in aliquam lacus sollicitudin sed. Morbi eu orci vitae urna lacinia
             tempor non sed eros. Donec lorem ante, malesuada sit amet purus ac, tincidunt elementum tellus.
         </p>
+
     </div>
 </div>
 <footer>
     &copy; Visos teisės saugomos.
 </footer>
+
+<script src="js/tautvydo.js"></script>
+<script src="js/tabai.js"></script>
 
 </body>
 </html>
