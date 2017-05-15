@@ -27,7 +27,8 @@ function showTab(tabid) {
 
             tab1.className = "tab";
             tab2.className = "tab active";
-            tab3.className = "tab";            break;
+            tab3.className = "tab";
+            break;
         case 3:
             console.log('Tab 3');
             sheet1.style.display = 'none';
@@ -36,6 +37,7 @@ function showTab(tabid) {
 
             tab1.className = "tab";
             tab2.className = "tab";
-            tab3.className = "tab active";            break;
+            tab3.className = "tab active";
+            break;
     }
 }
