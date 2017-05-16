@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<body ng-app="myApp" ng-cloak>
+
+<div ng-controller="meniuController" ng-cloak>
+    <div layout="row" layout-xs="column">
+        <div flex>
+            <md-content class="md-padding">
+                <md-nav-bar
+                        md-selected-nav-item="currentNavItem"
+                        nav-bar-aria-label="navigation links">
+                    <md-nav-item md-nav-click="goto('page1')" name="page1">
+                        Pirmas puslapis
+                    </md-nav-item>
+                    <md-nav-item md-nav-click="goto('page2')" name="page2">
+                        Antras puslapis
+                    </md-nav-item>
+                    <md-nav-item md-nav-click="goto('page3')" name="page3">
+                        Trecias puslapis
+                    </md-nav-item>
+                </md-nav-bar>
+            </md-content>
+        </div>
+    </div>
+    <div layout="row" layout-xs="column">
+        <div flex>
+            <md-content flex>
+
+                Pasirinkote puslapį: <span>{{currentNavItem}}</span>
+
+                <div class="turinys1" ng-show="isSet('page1')">
+
+                    <div ng-controller="SubheaderAppCtrl" layout="column" flex ng-cloak>
+                        <md-content style="height: 400px;" md-theme="altTheme">
+
+                            <section>
+                                <md-subheader class="md-primary">Unread Messages</md-subheader>
+                                <md-list layout-padding>
+                                    <md-list-item class="md-3-line" ng-repeat="message in messages">
+                                        <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+                                        <div class="md-list-item-text">
+                                            <h3>{{message.what}}</h3>
+                                            <h4>{{message.who}}</h4>
+                                            <p>
+                                                {{message.notes}}
+                                            </p>
+                                        </div>
+                                    </md-list-item>
+                                </md-list>
+                            </section>
+
+                            <section>
+                                <md-subheader class="md-warn">Late Messages</md-subheader>
+                                <md-list layout="column" layout-padding>
+                                    <md-list-item class="md-3-line" ng-repeat="message in messages">
+                                        <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+                                        <div class="md-list-item-text">
+                                            <h3>{{message.what}}</h3>
+                                            <h4>{{message.who}}</h4>
+                                            <p>
+                                                {{message.notes}}
+                                            </p>
+                                        </div>
+                                    </md-list-item>
+                                </md-list>
+                            </section>
+
+                            <section>
+                                <md-subheader>Read Messages</md-subheader>
+                                <md-list layout="column" layout-padding>
+                                    <md-list-item class="md-3-line" ng-repeat="message in messages">
+                                        <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+                                        <div class="md-list-item-text">
+                                            <h3>{{message.what}}</h3>
+                                            <h4>{{message.who}}</h4>
+                                            <p>
+                                                {{message.notes}}
+                                            </p>
+                                        </div>
+                                    </md-list-item>
+                                </md-list>
+                            </section>
+
+                            <section>
+                                <md-subheader class="md-accent">Archived messages</md-subheader>
+                                <md-list layout="column" layout-padding>
+                                    <md-list-item class="md-3-line" ng-repeat="message in messages">
+                                        <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+                                        <div class="md-list-item-text">
+                                            <h3>{{message.what}}</h3>
+                                            <h4>{{message.who}}</h4>
+                                            <p>
+                                                {{message.notes}}
+                                            </p>
+                                        </div>
+                                    </md-list-item>
+                                </md-list>
+                            </section>
+
+                        </md-content>
+                    </div>
+
+                </div>
+
+                <div class="turinys2" ng-show="isSet('page2')">
+                    Turinys 2
+                </div>
+
+                <div class="turinys3" ng-show="isSet('page3')">
+
+                    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Tautvydas Dulskis</span>
+                                <span class="md-subhead">Aprašymas apie mane...</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-lg card-media"></div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Skambinti</md-button>
+                            <md-button>Rašyti</md-button>
+                        </md-card-actions>
+                    </md-card>
+
+                </div>
+
+            </md-content>
+        </div>
+        <div flex="15">
+            <md-content flex>
+                Jūsų reklama čia...
+            </md-content>
+        </div>
+    </div>
+    <div layout="row" layout-xs="column">
+        <div flex>
+            <md-content class="md-padding">
+                <hr/>
+                &copy; Visos teisės saugomos 2017
+            </md-content>
+        </div>
+    </div>
+</div>
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script src="js/MyApp.js"></script>
+<script src="js/meniuController.js"></script>
+<script src="js/SubheaderAppCtrl.js"></script>
+
+</body>
+</html>
